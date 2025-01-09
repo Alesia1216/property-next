@@ -4,6 +4,7 @@ import Image from "next/image";
 import logoImg from '@/assets/images/logo-white.png'
 import HamburguerButton from "./hamburguer-button";
 import ProfileDropdownMenu from "./profile-dropdown";
+import NavLinkLogged from "@/components/nav-link-logged";
 
 export default function Navbar() {
   const isLoggedIn = true;
@@ -33,24 +34,25 @@ export default function Navbar() {
             {/* <!-- Desktop Menu Hidden below md screens --> */}
             <div className="hidden md:ml-6 md:block">
               <div className="flex space-x-2">
-                <Link
+                <NavLinkLogged
                   href="/"
-                  className="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+                  className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >
                   Home
-                </Link>
-                <Link
+                </NavLinkLogged>
+                <NavLinkLogged
                   href="/properties"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >
                   Properties
-                </Link>
-                <Link
-                  href="/Linkdd-property.html"
+                </NavLinkLogged>
+                <NavLinkLogged
+                  href="/properties/add"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+                  display={isLoggedIn}
                 >
                   Add Property
-                </Link>
+                </NavLinkLogged>
               </div>
             </div>
           </div>
