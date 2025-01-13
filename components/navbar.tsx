@@ -5,6 +5,7 @@ import logoImg from '@/assets/images/logo-white.png'
 import HamburguerButton from "./hamburguer-button";
 import ProfileDropdownMenu from "./profile-dropdown";
 import NavLinkLogged from "@/components/nav-link-logged";
+import { FaGoogle } from "react-icons/fa";
 
 export default function Navbar() {
   const isLoggedIn = true;
@@ -15,7 +16,7 @@ export default function Navbar() {
         <div className="relative flex h-20 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
             {/* <!-- COMPONENT Mobile menu button--> */}
-            <HamburguerButton />
+            <HamburguerButton isLoggedIn={isLoggedIn}/>
           </div>
 
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
@@ -62,7 +63,7 @@ export default function Navbar() {
             <div className="flex items-center">
               <button className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
               >
-                <i className="fa-brands fa-google text-white mr-2"></i>
+                <FaGoogle className="text-white mr-2"/>
                 <span>Login or Register</span>
               </button>
             </div>

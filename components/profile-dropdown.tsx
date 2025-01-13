@@ -1,9 +1,9 @@
 'use client';
 import React from 'react'
 import { useState } from 'react'
-import Link from 'next/link';
 import Image from 'next/image';
 import profileImg from '@/assets/images/profile.png'
+import NavLinkLogged from './nav-link-logged';
 
 export default function ProfileDropdownMenu() {
     const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
@@ -45,33 +45,24 @@ export default function ProfileDropdownMenu() {
                 aria-labelledby="user-menu-button"
                 tabIndex={-1}
               >
-                <Link
+                <NavLinkLogged
                   href="/profile.html"
                   className="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabIndex={-1}
-                  id="user-menu-item-0"
                 >
                   Your Profile
-                </Link>
-                <Link
+                </NavLinkLogged>
+                <NavLinkLogged
                   href="saved-properties.html"
                   className="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabIndex={-1}
-                  id="user-menu-item-2"
                 >
                   Saved Properties
-                </Link>
-                <Link
+                </NavLinkLogged>
+                <NavLinkLogged
                   href="#"
                   className="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabIndex={-1}
-                  id="user-menu-item-2"
                 >
                   Sign Out
-                </Link>
+                </NavLinkLogged>
               </div>}
             </div>
 
