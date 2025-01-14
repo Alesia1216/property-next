@@ -2,11 +2,13 @@
   "name": "property-next",
   "version": "0.1.0",
   "private": true,
+  "author": "Alesia",
   "scripts": {
     "dev": "echo 'hola' && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "mongo": "docker run --rm --name mongodb -v mongo_property_next:/data/db -p 27017:27017 -d mongodb/mongodb-community-server:latest"
   },
   "dependencies": {
     "next": "15.1.3",

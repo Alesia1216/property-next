@@ -15,7 +15,19 @@ export interface PropertyModel {
     square_feet: number;
     amenities: string[];
     rates: {
-        weekly: number;
-        monthly: number;
+        weekly?: number;
+        nightly?: number;
+        monthly?: number;
     };
+    seller_info: {
+        name: string;
+        email: string;
+        phone: string;
+    };
+    images: string[];
+    is_featured: boolean;
+    createdAt: string;
+    updatedAt: string;
+
+
 }
